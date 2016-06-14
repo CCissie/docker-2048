@@ -1,8 +1,7 @@
-FROM registry.shurenyun.com/gliderlabs_alpine
-
+FROM alpine:3.2
 MAINTAINER alex <alexwhen@gmail.com> 
 
-RUN apk --update add nginx && mkdir /tmp/nginx
+RUN apk --update add nginx
 
 COPY 2048 /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.log.conf
